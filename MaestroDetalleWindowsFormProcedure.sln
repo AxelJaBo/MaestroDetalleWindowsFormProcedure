@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaestroDetalleWindowsFormProcedure", "MaestroDetalleWindowsFormProcedure\MaestroDetalleWindowsFormProcedure.csproj", "{1103256B-ED56-4F4D-BA8A-4F3493FE1801}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1103256B-ED56-4F4D-BA8A-4F3493FE1801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1103256B-ED56-4F4D-BA8A-4F3493FE1801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1103256B-ED56-4F4D-BA8A-4F3493FE1801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1103256B-ED56-4F4D-BA8A-4F3493FE1801}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69B93E18-E8F3-4E0B-8437-89A5619431C5}
+	EndGlobalSection
+EndGlobal
