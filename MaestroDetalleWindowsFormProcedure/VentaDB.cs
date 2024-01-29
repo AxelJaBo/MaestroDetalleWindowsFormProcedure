@@ -15,11 +15,12 @@ namespace MaestroDetalleWindowsFormProcedure
 
         public void Add(string Cliente)
         {
-            string query = "insert into venta(cliente) values(@cliente)";
+            string query = "insert into venta(cliente, fecha) values(@cliente, @fecha)";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@cliente", Cliente);
+                command.Parameters.AddWithValue("@fecha", DateTime.Now);
 
                 connection.Open();
                 command.ExecuteNonQuery();
