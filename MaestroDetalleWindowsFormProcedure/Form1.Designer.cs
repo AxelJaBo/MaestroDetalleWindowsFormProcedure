@@ -39,6 +39,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dgvConceptos = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Op = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConceptos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,9 +126,16 @@
             // 
             // dgvConceptos
             // 
+            this.dgvConceptos.AllowUserToAddRows = false;
             this.dgvConceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConceptos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cantidad,
+            this.Nombre,
+            this.Precio,
+            this.Op});
             this.dgvConceptos.Location = new System.Drawing.Point(13, 76);
             this.dgvConceptos.Name = "dgvConceptos";
+            this.dgvConceptos.ReadOnly = true;
             this.dgvConceptos.Size = new System.Drawing.Size(554, 297);
             this.dgvConceptos.TabIndex = 9;
             // 
@@ -137,6 +148,30 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Op
+            // 
+            this.Op.HeaderText = "Op";
+            this.Op.Name = "Op";
+            this.Op.ReadOnly = true;
             // 
             // Form1
             // 
@@ -175,6 +210,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvConceptos;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewButtonColumn Op;
     }
 }
 
