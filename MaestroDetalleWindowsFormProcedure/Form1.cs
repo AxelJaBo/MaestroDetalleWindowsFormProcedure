@@ -16,5 +16,21 @@ namespace MaestroDetalleWindowsFormProcedure
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Cantidad = txtCantidad.Text;
+            string Nombre = txtNombre.Text;
+            string Precio = txtPrecio.Text;
+            dgvConceptos.Rows.Add(new object[]
+            {
+                Cantidad, Nombre, Precio, "Eliminar"
+            });
+
+            txtCantidad.Text = "";
+            txtNombre.Text = "";
+            txtPrecio.Text = "";
+            txtCantidad.Focus();
+        }
     }
 }
