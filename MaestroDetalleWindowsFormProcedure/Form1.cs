@@ -32,5 +32,19 @@ namespace MaestroDetalleWindowsFormProcedure
             txtPrecio.Text = "";
             txtCantidad.Focus();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VentaDB oVenta = new VentaDB();
+                oVenta.Add(txtCliente.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

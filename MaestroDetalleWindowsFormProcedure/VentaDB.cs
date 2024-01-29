@@ -16,7 +16,7 @@ namespace MaestroDetalleWindowsFormProcedure
         public void Add(string Cliente)
         {
             string query = "insert into venta(cliente) values(@cliente)";
-            using (SqlConnection connection = new SqlConnection())
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@cliente", Cliente);
