@@ -37,8 +37,20 @@ namespace MaestroDetalleWindowsFormProcedure
         {
             try
             {
+                List<Concepto> lst = new List<Concepto>();
+
+                // Llenado de elementos detalles
+                foreach(DataGridViewRow dr in dgvConceptos.Rows)
+                {
+                    Concepto oConcepto = new Concepto();
+                    oConcepto.Cantidad = int.Parse(dr.Cells[0].Value.ToString());
+                    oConcepto.Nombre = dr.Cells[1].Value.ToString();
+                    oConcepto.Precio = decimal.Parse(dr.Cells[2].Value.ToString());
+                    lst.Add(oConcepto);
+                }
+
                 VentaDB oVenta = new VentaDB();
-                oVenta.Add(txtCliente.Text);
+                oVenta.Add(txtCliente.Text, lst);
                 MessageBox.Show("Venta realizada con éxito!");
             }
             catch (Exception ex)
@@ -47,5 +59,13 @@ namespace MaestroDetalleWindowsFormProcedure
             }
         }
 
+        private void dgvConceptos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex<0 || e.ColumnIndex != dgvConceptos.Columns["Op"].Index)
+                return;
+
+            dgvConceptos.Rows.RemoveAt(e.RowIndex);
+            
+        }
     }
 }
