@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MaestroDetalleWindowsFormProcedure
 {
@@ -11,11 +8,10 @@ namespace MaestroDetalleWindowsFormProcedure
     {
         private string connectionString =
             "Data Source=localhost; initial Catalog=MaestroDetalleProcedimiento;" +
-            "User=DESKTOP-KA53HTR;Password=";
+            "User=sa;Password=7GbE6:cX1NQG";
 
-        public void Add(string Cliente)
+        public void Add(string Cliente, List<>)
         {
-            string query = "insert into venta(cliente, fecha) values(@cliente, @fecha)";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);

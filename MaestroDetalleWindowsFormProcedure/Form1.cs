@@ -39,6 +39,7 @@ namespace MaestroDetalleWindowsFormProcedure
             {
                 VentaDB oVenta = new VentaDB();
                 oVenta.Add(txtCliente.Text);
+                MessageBox.Show("Venta realizada con éxito!");
             }
             catch (Exception ex)
             {
